@@ -1,0 +1,24 @@
+[
+    {
+        "id": 8,
+        "name": "Jhonatan Fernando",
+        "number": 8,
+        "position": "Fixo",
+        "imageName": "jhonatan"
+    },
+    {
+        "id": 11,
+        "name": "Denys Balsamao",
+        "number": 11,
+        "position": "Pivô",
+        "imageName": "denys"
+    },
+    {
+        "id": 6,
+        "name": "Leandro Fontalland",
+        "number": 6,
+        "position": "Ala Esquerdo",
+        "imageName": "fontalland"
+    }
+    
+]

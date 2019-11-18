@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "title": "Milan x Inter",
+        "image" : "soccermatch",
+        "date": "01/01/2000",
+        "goalsPro": 2,
+        "goalsCons": 2
+    },
+    {
+        "id": 1,
+        "title": "Milan x Atalanta",
+        "image" : "soccermatch",
+        "date": "01/02/2000",
+        "goalsPro": 2,
+        "goalsCons": 1
+    }
+    
+]
