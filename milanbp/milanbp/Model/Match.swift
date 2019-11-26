@@ -11,7 +11,8 @@ import SwiftUI
 struct Match: Decodable, Identifiable {
     var id : Int
     var title: String
-    var image: String
+    var imagePro: String
+    var imageCon: String
     var goalsPro: Int
     var goalsCons: Int
     var date: String

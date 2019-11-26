@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct MatchView: View {
-    var title = "Milan BP x Inter"
-    var image = "Illustration1"
+    var match: Match;
+    
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -19,24 +19,34 @@ struct MatchView: View {
                 
                 VStack(alignment: .leading) {
                     VStack(alignment: .leading) {
-                        Text(self.title)
+                        Text(self.match.title)
                             .foregroundColor(Color("primary"))
                             .font(.title)
                             .fontWeight(.heavy)
                             .lineLimit(nil)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .frame(height: 70)
-                        Text("10 sections")
+                        Text(self.match.date)
                             .foregroundColor(Color("secondary"))
                             .padding(.top, 0)
                     }
                     .frame(width: 180)
                     
-                    Image(self.image)
+                    HStack{
+                        Image(self.match.imagePro)
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: geometry.size.width-60, height: 200)
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 120, height: 200)
                         .padding()
+                        
+                        Image(self.match.imageCon)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 120, height: 200)
+                        .padding()
+                    }
+                    
+                    
                     Spacer()
                 }
                 .padding(.top, 40)
@@ -72,7 +82,7 @@ struct MatchView: View {
 #if DEBUG
 struct CourseView_Previews : PreviewProvider {
     static var previews: some View {
-        MatchView()
+        MatchView(match : matchesData[1])
     }
 }
 #endif
