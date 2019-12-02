@@ -13,6 +13,7 @@ struct HomeList : View {
     var matches = matchesData
  
     @State var showCourseView = false
+    @State var match : Match = nil
     
     var body: some View {
         ScrollView {
@@ -29,14 +30,15 @@ struct HomeList : View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
                     ForEach(matches) { course in
-                        GeometryReader { geometry in
-                            Button(action: {self.showCourseView.toggle()}) {
+                         GeometryReader { geometry in
+                            Button(action: {self.showCourseView.toggle();self.match = course}) {
+                                
                                 CardView(course: course)
                                     .rotation3DEffect(Angle(degrees: Double(
                                         (geometry.frame(in: .global).minX - 30) / -30
                                     )), axis: (x: 0, y: 10, z: 0))
                                     .sheet(isPresented: self.$showCourseView) {
-                                        MatchView(match: course)
+                                        MatchView(match: self.match!)
                                     }
                             }
                         }
