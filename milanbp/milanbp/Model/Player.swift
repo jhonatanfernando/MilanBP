@@ -11,7 +11,7 @@ import SwiftUI
 struct Player: Decodable, Identifiable {
     var id: Int
     var name: String
-    fileprivate var imageName: String
+    var imageName: String
     var number: Int
     var position: String
 }

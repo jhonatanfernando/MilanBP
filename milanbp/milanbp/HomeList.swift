@@ -20,7 +20,7 @@ struct HomeList : View {
             HStack {
                 VStack(alignment: .leading) {
                     Text("Matches").font(.largeTitle).fontWeight(.heavy)
-                    Text("21 matches").foregroundColor(.gray)
+                    //Text("21 matches").foregroundColor(.gray)
                 }
                 Spacer()
                 }
@@ -49,9 +49,7 @@ struct HomeList : View {
             }
             .frame(width: UIScreen.main.bounds.width, height: 480)
             
-            //CertificateRow()
-            
-            //CourseRow()
+            PlayerRow()
             
             Spacer()
         }
