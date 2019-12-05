@@ -6,7 +6,8 @@
         "imageCon" : "inter",
         "date": "01/01/2000",
         "goalsPro": 2,
-        "goalsCons": 2
+        "goalsCons": 2,
+        "comments": "O jogo foi equilibrado do início ao fim. O time da Inter saiu na frente do placar logo no início do primeiro tempo. A equipe do milan conseguiu o empate em jogada individual. No início do segundo tempo a equipe da Inter voltou a ficar na frente no placar mas sofre o gol de empate no fim do jogo."
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "imageCon" : "atalanta",
         "date": "01/02/2000",
         "goalsPro": 2,
-        "goalsCons": 1
+        "goalsCons": 1,
+         "comments": "Jogo pouco movimentado, a equipe do Milan abriu e amplicou o placar nos 10 primeiros minutos do primeiro tempo. O time da Atalanta diminuiu no fim do jogo."
     }
     
 ]

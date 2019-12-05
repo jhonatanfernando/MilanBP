@@ -28,10 +28,11 @@ struct PlayerItem: View {
                 
                 //Spacer()
                 
-                Image("milan")
+                Image(player.team)
                     .resizable()
-                    .frame(width: 70, height: 50)
+                    .frame(width: 70, height: 70)
                     .scaledToFit()
+                    .aspectRatio(contentMode: .fit)
                     .padding(.trailing, 5)
             }
             
@@ -49,6 +50,6 @@ struct PlayerItem: View {
 
 struct PlayerItem_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerItem(player: playersData[0]).previewLayout(.sizeThatFits)
+        PlayerItem(player: playersData[1]).previewLayout(.sizeThatFits)
     }
 }

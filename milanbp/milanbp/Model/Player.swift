@@ -14,6 +14,7 @@ struct Player: Decodable, Identifiable {
     var imageName: String
     var number: Int
     var position: String
+    var team: String
 }
 
 extension Player {

@@ -16,4 +16,5 @@ struct Match: Decodable, Identifiable {
     var goalsPro: Int
     var goalsCons: Int
     var date: String
+    var comments: String
 }

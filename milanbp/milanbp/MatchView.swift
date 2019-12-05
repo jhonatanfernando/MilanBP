@@ -26,11 +26,13 @@ struct MatchView: View {
                             .lineLimit(nil)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .frame(height: 70)
+                        
+                        
                         Text(self.match.date)
                             .foregroundColor(Color("secondary"))
                             .padding(.top, 0)
                     }
-                    .frame(width: 180)
+                    //.frame(width: 180)
                     
                     HStack{
                         Image(self.match.imagePro)
@@ -38,6 +40,20 @@ struct MatchView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 120, height: 200)
                         .padding()
+                        
+                        Text(String(self.match.goalsPro))
+                        .foregroundColor(.white)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .padding(10)
+                        
+                        Spacer()
+                        
+                        Text(String(self.match.goalsCons))
+                        .foregroundColor(.white)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .padding(10)
                         
                         Image(self.match.imageCon)
                         .resizable()
@@ -52,22 +68,22 @@ struct MatchView: View {
                 .padding(.top, 40)
                 .padding(.leading, 10)
                 
-                ZStack(alignment: .topTrailing) {
+               /* ZStack(alignment: .topTrailing) {
                     HStack {
-                        Image(systemName: "play.fill")
-                            .font(.largeTitle)
+                        //Image(systemName: "play.fill")
+                        //    .font(.largeTitle)
                     }
-                    .frame(width: 100, height: 80)
-                        .background(Color("accent"))
-                        .cornerRadius(30)
-                        .shadow(color: Color("accentShadow"), radius: 10, x: 0, y: 10)
+                   // .frame(width: 100, height: 80)
+                   //     .background(Color("accent"))
+                   //     .cornerRadius(30)
+                    //    .shadow(color: Color("accentShadow"), radius: 10, x: 0, y: 10)
                     Spacer()
                 }
                 .padding(.top, 20)
-                .padding(.all, 20)
+                .padding(.all, 20)*/
                 
                 ScrollView {
-                    MatchBottom()
+                    MatchBottom(text: self.match.comments)
                         .background(Color.white)
                         .cornerRadius(30)
                         .frame(width: geometry.size.width, height: geometry.size.height)
